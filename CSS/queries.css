@@ -1,0 +1,225 @@
+/**********************************/
+/* BELOW 1344px Smaller Computers */
+/*********************************/
+
+@media (max-width: 84em) {
+  .hero,
+  .nav-box {
+    max-width: 120rem;
+  }
+
+  .primary-heading {
+    font-size: 5.2rem;
+  }
+
+  .secondary-heading {
+    font-size: 3.6rem;
+  }
+
+  .general-description {
+    font-size: 2.2rem;
+  }
+
+  .profile-quote {
+    font-size: 1.8rem;
+  }
+
+  .profile-footer {
+    font-size: 1.2rem;
+  }
+
+  .profile-img {
+    height: 60rem;
+  }
+}
+
+/**********************************/
+/* BELOW 1200px Landscape Tablets */
+/*********************************/
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .btn:link,
+  .btn:visited {
+    text-align: center;
+  }
+}
+
+/**********************************/
+/* BELOW 944px Tablets */
+/*********************************/
+
+@media (max-width: 59em) {
+  .main-section {
+    height: auto;
+  }
+
+  html {
+    font-size: 50%;
+  }
+
+  .hero,
+  .nav-box {
+    max-width: 110rem;
+  }
+
+  .grid--3-cols {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .streaming-card {
+    grid-column: 2 / 3;
+    justify-self: center;
+    width: auto;
+  }
+
+  .list-genres {
+    transform: translate(75%, 0);
+  }
+
+  /**********************************/
+  /* MOBILE NAVIGATION*/
+  /*********************************/
+  .btn-mobile-nav {
+    display: block;
+    z-index: 2;
+  }
+
+  /* ESTADO DEFAULT DE LA NAVEGACION MOVIL*/
+  .nav-header {
+    background-color: rgba(26, 0, 0, 0.99);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* NAVEGACION MOVIL CERRADA */
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+
+    /* ANIMACION */
+    transform: translateX(100%);
+    transition: all 0.3s ease-in;
+  }
+
+  .nav-link:link,
+  .nav-link:visited {
+    font-size: 2.4rem;
+  }
+
+  .ico-car {
+    height: 3.2rem;
+    width: 3.2rem;
+  }
+
+  .nav-header ul {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  /* STATES */
+
+  /* NAVEGACION MOVIL ABIERTA */
+  .nav-open .nav-header {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-circle-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu"] {
+    display: none;
+  }
+}
+
+/**********************************/
+/* BELOW 704px Smaller Tablets */
+/*********************************/
+
+@media (max-width: 44em) {
+  .hero-text-box {
+    text-align: center;
+  }
+
+  .btn-box {
+    display: flex;
+    align-self: center;
+  }
+
+  .btn:link,
+  .btn:visited {
+    padding: 1.2rem 2rem;
+  }
+
+  .hero picture {
+    text-align: center;
+  }
+
+  .profile .secondary-heading {
+    grid-column: 1/3;
+  }
+
+  .profile .secondary-heading {
+    grid-column: 1;
+  }
+
+  .profile-pic {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+  }
+
+  .profile-text-box {
+    grid-column: 1 / -1;
+    grid-row: 3/4;
+  }
+
+  .cta-form-section select,
+  .cta-form-section textarea,
+  .cta-form-section button {
+    grid-column: auto;
+  }
+
+  .cta-banner {
+    grid-row: 1/2;
+  }
+
+  .grid--2-cols {
+    grid-template-columns: 1fr;
+    row-gap: 4.8rem;
+  }
+}
+
+/**********************************/
+/* BELOW 544px Phones */
+/*********************************/
+@media (max-width: 34em) {
+  .grid--3-cols {
+    grid-template-columns: 1fr;
+    row-gap: 4.8rem;
+  }
+
+  .streaming-card {
+    grid-column: auto;
+  }
+
+  .list-genres {
+    transform: none;
+  }
+
+  .spotify-card {
+    height: 180px;
+  }
+}

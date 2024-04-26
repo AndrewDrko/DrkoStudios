@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="CSS/style.css" />
     <link rel="stylesheet" href="CSS/general.css" />
+    <link rel="stylesheet" href="CSS/queries.css" />
+    <link rel="stylesheet" href="CSS/style-servicios.css" />
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -13,36 +15,246 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script defer src="/js/script-servicios.js"></script>
     <title>Servicios - Drko Studios</title>
   </head>
+
   <body>
-    <header class="main-header">
-      <div class="nav-box">
-        <a href="#">
+    <div class="main-section">
+      <header class="main-header">
+        <div class="nav-box">
+          <a href="index.html">
+            <img
+              class="logo-typo"
+              src="img/logotype.png"
+              alt="Drko Studios logo plus typography"
+            />
+          </a>
+          <nav class="nav-header">
+            <ul>
+              <li><a class="nav-link" href="index.html">Inicio</a></li>
+              <li><a class="nav-link" href="servicios.html">Servicios</a></li>
+              <li><a class="nav-link" href="#">Contacto</a></li>
+              <li>
+                <a class="car-link nav-link" href="#">
+                  <div class="center">
+                    <ion-icon class="ico ico-car" name="cart"></ion-icon>
+                    <span class="car-num">0</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <button class="btn-mobile-nav">
+            <ion-icon class="icon-mobile-nav" name="menu"></ion-icon>
+            <ion-icon
+              class="icon-mobile-nav"
+              name="close-circle-outline"
+            ></ion-icon>
+          </button>
+        </div>
+      </header>
+
+      <section class="banner-section">
+        <div class="banner container">
           <img
             class="logo-typo"
             src="img/logotype.png"
             alt="Drko Studios logo plus typography"
           />
-        </a>
-        <nav class="nav-header">
-          <ul>
-            <li><a class="nav-link" href="index.html">Inicio</a></li>
-            <li><a class="nav-link" href="#">Acerca de</a></li>
-            <li><a class="nav-link" href="servicios.html">Servicios</a></li>
-            <li><a class="nav-link" href="#">Portfolio</a></li>
-            <li><a class="nav-link" href="#">Contacto</a></li>
-            <li>
-              <a class="car-link nav-link" href="#">
-                <div class="center">
-                  <ion-icon class="ico ico-car" name="cart"></ion-icon>
-                  <span class="car-num">0</span>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+          <h1 class="primary-heading">
+            En Drko Studios contamos con servicios personalizables según tus
+            necesidades.
+          </h1>
+
+          <p class="general-description">
+            Elige entre Producción Musical, Mezcla, Mastering y Distribución
+            Musical para singles, EP's o LP's
+          </p>
+        </div>
+      </section>
+      <section class="products-section">
+        <div class="products container grid grid--2-cols">
+          <div class="square grid grid--3-cols square-production">
+            <div class="text-area">
+              <h2 class="secondary-heading">Producción Musical</h2>
+              <p class="general-description">
+                Te ayudamos a proyectar tus ideas al siguiente nivel, realza la
+                calidad musical de tus canciones y hazlas sonar profesionales.
+              </p>
+              <h2 class="secondary-heading subtitle">Especificaciones</h2>
+              <ul class="service-features">
+                <li>
+                  Puedes contar con la idea principal de tu canción o iniciar
+                  una desde cero.
+                </li>
+                <li>Contar con una maqueta (Opcional)</li>
+                <li>
+                  Tener conocimientos básicos de teoría musical para poder
+                  abordar tus canciones.
+                </li>
+                <li>
+                  El servicio cubre grabación, arreglos, composición y sound
+                  design.
+                </li>
+              </ul>
+            </div>
+            <img
+              class="service-img"
+              src="img/Cartoon_music.jpg"
+              alt="Drko Studios logo plus typography"
+            />
+            <div class="text-area price">
+              <h2 class="secondary-heading subtitle">Precio</h2>
+              <p class="pricing"><span>$</span>399 MXN por canción.</p>
+            </div>
+            <button class="button-car" href="#">Añadir al Carrito</button>
+          </div>
+
+          <div class="square grid grid--3-cols square-production">
+            <div class="text-area">
+              <h2 class="secondary-heading">Mezcla</h2>
+              <p class="general-description">
+                Envíanos tus tracks grabados y deja que nosotros le demos el
+                sonido adecuado a tu canción bajo tus especificaciones.
+              </p>
+              <h2 class="secondary-heading subtitle">Especificaciones</h2>
+              <ul class="service-features">
+                <li>Límite máximo de 40 pistas de stems.</li>
+                <li>
+                  La canción no debe exceder de 5 minutos (de lo contrario se
+                  aumenta el monto de servicio).
+                </li>
+                <li>
+                  Es preferente que las pistas de stems estén previamente
+                  editadas (Opcional).
+                </li>
+                <li>
+                  Las pistas deben estar grabadas en muestreo de 44.1 Khz y tasa
+                  de 24 bits.
+                </li>
+              </ul>
+            </div>
+            <img
+              class="service-img"
+              src="img/Cartoon_music_production.jpg"
+              alt="Drko Studios logo plus typography"
+            />
+            <div class="text-area price">
+              <h2 class="secondary-heading subtitle">Precio</h2>
+              <p class="pricing"><span>$</span>499 MXN por canción.</p>
+            </div>
+            <button class="button-car" href="#">Añadir al Carrito</button>
+          </div>
+
+          <div class="square grid grid--3-cols square-production">
+            <div class="text-area">
+              <h2 class="secondary-heading">Mastering</h2>
+              <p class="general-description">
+                Envianos el bounce final de tu mezcla y nosotros nos encargamos
+                de darle el volumen y calidad final para realzar las intenciones
+                de la mezcla.
+              </p>
+              <h2 class="secondary-heading subtitle">Especificaciones</h2>
+              <ul class="service-features">
+                <li>
+                  Puedes enviar stems de instrumentos o un único track de
+                  mezcla.
+                </li>
+                <li>La mezcla deberá tener un headroom máximo de -3.0db</li>
+                <li>
+                  La mezcla debe cumplir con criterios mínimos para una correcta
+                  masterización.
+                </li>
+                <li>
+                  Las pistas deben estar grabadas en muestreo de 44.1 Khz y tasa
+                  de 24 bits.
+                </li>
+              </ul>
+            </div>
+            <img
+              class="service-img"
+              src="img/Cartoon_masterin.jpg"
+              alt="Drko Studios logo plus typography"
+            />
+            <div class="text-area price">
+              <h2 class="secondary-heading subtitle">Precio</h2>
+              <p class="pricing"><span>$</span>199 MXN por canción.</p>
+            </div>
+            <button class="button-car" href="#">Añadir al Carrito</button>
+          </div>
+
+          <div class="square grid grid--3-cols square-production">
+            <div class="text-area">
+              <h2 class="secondary-heading">
+                Distribución a Plataformas de Streaming
+              </h2>
+              <p class="general-description">
+                Distribuye tu material musical en las plataformas de streaming
+                más populares:
+              </p>
+              <h2 class="secondary-heading subtitle">Especificaciones</h2>
+              <ul class="service-features">
+                <li>
+                  Deberás enviarnos tu track en un formato .wav o .mp3 de alta
+                  calidad (320kbps).
+                </li>
+                <li>
+                  Deberás enviarnos: Nombre de Artista, Album (Single, EP o LP),
+                  Fecha de Publicación (Bajo disponibilidad), Caratula (3000px x
+                  3000px), Personas Involucradas en la Obra (Productores,
+                  Compositores etc).
+                </li>
+                <li>
+                  Deberás contar con alguna red social que identifique tu
+                  proyecto musical para registrarte en Spotify como Artista
+                  Verificado (En caso de no tener un perfil).
+                </li>
+              </ul>
+            </div>
+            <img
+              class="service-img"
+              src="img/Cartoon_music_streaming.jpg"
+              alt="Drko Studios logo plus typography"
+            />
+            <div class="text-area price">
+              <h2 class="secondary-heading subtitle">Precio</h2>
+              <p class="pricing"><span>$</span>99 MXN por canción.</p>
+            </div>
+            <button class="button-car" href="#">Añadir al Carrito</button>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-section">
+          <div class="footer-head">
+            <div class="line"></div>
+            <div class="line-social">
+              <ion-icon class="ico social-ico" name="logo-facebook"></ion-icon>
+              <ion-icon class="ico social-ico" name="logo-instagram"></ion-icon>
+              <ion-icon class="ico social-ico" name="logo-twitter"></ion-icon>
+              <ion-icon class="ico social-ico" name="logo-youtube"></ion-icon>
+            </div>
+            <div class="line"></div>
+          </div>
+          <div class="content-footer">
+            <figure class="footer-logo">
+              <img
+                class="logo-typo"
+                src="img/logotype.png"
+                alt="Drko Studios Logo"
+              />
+            </figure>
+            <p class="c-message">
+              Copyright &copy; <span class="year"></span
+              ><span> Drko Studios.</span>
+            </p>
+          </div>
+          <div class="footer-contact"></div>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

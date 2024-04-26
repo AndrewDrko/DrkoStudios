@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="CSS/style.css" />
     <link rel="stylesheet" href="CSS/general.css" />
+    <link rel="stylesheet" href="CSS/queries.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,7 +21,10 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
-    <title>Drko Studios</title>
+    <script defer src="/js/script.js"></script>
+    <title>
+      Drko Studios - Tu música, nuestro arte: mezcla y producción excepcionales.
+    </title>
   </head>
   <body>
     <div class="main-section">
@@ -36,10 +40,10 @@
           <nav class="nav-header">
             <ul>
               <li><a class="nav-link" href="index.html">Inicio</a></li>
-              <li><a class="nav-link" href="#">Acerca de</a></li>
+              <li><a class="nav-link" href="#profile-section">Acerca de</a></li>
               <li><a class="nav-link" href="servicios.html">Servicios</a></li>
-              <li><a class="nav-link" href="#">Portfolio</a></li>
-              <li><a class="nav-link" href="#">Contacto</a></li>
+              <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
+              <li><a class="nav-link" href="#contact-section">Contacto</a></li>
               <li>
                 <a class="car-link nav-link" href="#">
                   <div class="center">
@@ -50,8 +54,17 @@
               </li>
             </ul>
           </nav>
+
+          <button class="btn-mobile-nav">
+            <ion-icon class="icon-mobile-nav" name="menu"></ion-icon>
+            <ion-icon
+              class="icon-mobile-nav"
+              name="close-circle-outline"
+            ></ion-icon>
+          </button>
         </div>
       </header>
+
       <section class="hero-section">
         <div class="hero grid grid--2-cols">
           <div class="hero-text-box">
@@ -66,7 +79,9 @@
               <a class="btn btn-primary" href="#contact-section"
                 >¡Comienza Ahora!</a
               >
-              <a class="btn btn-secondary" href="#">Leer Más &downarrow;</a>
+              <a class="btn btn-secondary" href="#profile-section"
+                >Leer Más &downarrow;</a
+              >
             </div>
           </div>
           <picture>
@@ -80,7 +95,7 @@
       </section>
     </div>
 
-    <section class="section profile-section">
+    <section class="section profile-section" id="profile-section">
       <div class="profile container grid grid--2-cols">
         <h2 class="secondary-heading">Conoce Drko Studios</h2>
         <picture class="profile-pic">
@@ -122,7 +137,7 @@
       </div>
     </section>
 
-    <section class="section features-section">
+    <section class="section features-section" id="servicios">
       <div class="features container">
         <h2 class="secondary-heading">
           Servicios Profesionales de Audio ¡ONLINE!
@@ -222,7 +237,7 @@
       </div>
     </section>
 
-    <section class="portfolio-section section">
+    <section class="portfolio-section section" id="portfolio">
       <div class="portfolio container">
         <h2 class="secondary-heading portfolio-heading">
           Portfolio: Mira Nuestros Trabajos Más Recientes
@@ -235,6 +250,7 @@
 
         <div>
           <iframe
+            class="spotify-card"
             style="border-radius: 12px"
             src="https://open.spotify.com/embed/track/3IfU7FUnrljaEDbysAijwa?utm_source=generator&theme=0"
             width="100%"
@@ -246,6 +262,7 @@
           ></iframe>
 
           <iframe
+            class="spotify-card"
             style="border-radius: 12px"
             src="https://open.spotify.com/embed/track/0mOzg1kNxkuIamvtDF9y9G?utm_source=generator"
             width="100%"
@@ -257,6 +274,7 @@
           ></iframe>
 
           <iframe
+            class="spotify-card"
             style="border-radius: 12px"
             src="https://open.spotify.com/embed/track/5M9XhHhqyjxBy3AhwZjVbu?utm_source=generator"
             width="100%"
@@ -340,7 +358,8 @@
             />
           </figure>
           <p class="c-message">
-            Copyright &copy; 2024 <span>Drko Studios.</span>
+            Copyright &copy; <span class="year"></span
+            ><span> Drko Studios.</span>
           </p>
         </div>
         <div class="footer-contact"></div>

@@ -60,7 +60,10 @@ Default:
   padding: 0 3.2rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+}
+
+.nav-box a:first-child {
+  margin-right: auto;
 }
 
 .logo-typo {
@@ -91,6 +94,27 @@ Default:
   gap: 2.4rem;
   justify-content: flex-end;
   list-style: none;
+}
+
+/**********************************/
+/*MOBILE NAV*/
+/*********************************/
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: white;
+}
+
+.icon-mobile-nav[name="close-circle-outline"] {
+  display: none;
 }
 
 /**********************************/
@@ -127,7 +151,7 @@ Default:
 }
 
 .hero-img {
-  height: 57rem;
+  width: 100%;
   pointer-events: none;
 }
 
@@ -225,6 +249,7 @@ Default:
   justify-content: space-between;
   border: 1px solid rgba(63, 63, 63, 0.396);
   border-radius: 5px;
+  background-color: #1d1d1d;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
 }
 
@@ -327,10 +352,6 @@ Default:
 .cta-form input::placeholder,
 .cta-form textarea::placeholder {
   color: #aaa;
-}
-
-.cta .cta-card {
-  grid-template-columns: 2fr 1.5fr;
 }
 
 .btn-submit {
