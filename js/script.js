@@ -1,15 +1,20 @@
+import { getNumProducts } from './script-servicios.js';
+
+const numProductsElement = document.querySelector('.car-num');
+numProductsElement.innerHTML = getNumProducts();
+
 /* SET CURRENT YEAR */
-const yearEl = document.querySelector(".year");
+const yearEl = document.querySelector('.year');
 const currentYear = new Date().getFullYear();
 yearEl.textContent = currentYear;
 
 /* MAKE MOBILE NAVIGATION WORK */
 
-const btnNavEl = document.querySelector(".btn-mobile-nav");
-const headerEl = document.querySelector(".main-header");
+const btnNavEl = document.querySelector('.btn-mobile-nav');
+const headerEl = document.querySelector('.main-header');
 
-btnNavEl.addEventListener("click", function () {
-  headerEl.classList.toggle("nav-open");
+btnNavEl.addEventListener('click', function () {
+  headerEl.classList.toggle('nav-open');
 });
 
 ///////////////////////////////////////////////////////////
@@ -43,34 +48,34 @@ allLinks.forEach(function (link) {
   });
 }); */
 
-const allLinks = document.querySelectorAll("a");
+const allLinks = document.querySelectorAll('a');
 
 allLinks.forEach(function (link) {
-  link.addEventListener("click", function (e) {
-    const href = link.getAttribute("href");
+  link.addEventListener('click', function (e) {
+    const href = link.getAttribute('href');
 
     // Check if the link is an internal anchor link
-    if (href && (href.startsWith("#") || href === "#")) {
+    if (href && (href.startsWith('#') || href === '#')) {
       e.preventDefault();
 
       // Scroll back to top
-      if (href === "#") {
+      if (href === '#') {
         window.scrollTo({
           top: 0,
-          behavior: "smooth",
+          behavior: 'smooth',
         });
       } else {
         // Scroll to other anchor links
         const sectionEl = document.querySelector(href);
         if (sectionEl) {
-          sectionEl.scrollIntoView({ behavior: "smooth" });
+          sectionEl.scrollIntoView({ behavior: 'smooth' });
         }
       }
 
       // Close mobile navigation
-      const headerEl = document.querySelector("header");
-      if (link.classList.contains("main-nav-link")) {
-        headerEl.classList.toggle("nav-open");
+      const headerEl = document.querySelector('header');
+      if (link.classList.contains('main-nav-link')) {
+        headerEl.classList.toggle('nav-open');
       }
     }
   });
@@ -79,45 +84,45 @@ allLinks.forEach(function (link) {
 ///////////////////////////////////////////////////////////
 // Sticky Navigation
 
-const sectionHeroEl = document.querySelector(".section-hero");
+const sectionHeroEl = document.querySelector('.section-hero');
 
 const obs = new IntersectionObserver(
   function (entries) {
     const ent = entries[0];
     console.log(ent);
     if (ent.isIntersecting === false) {
-      document.body.classList.add("sticky");
+      document.body.classList.add('sticky');
     }
     if (ent.isIntersecting === true) {
-      document.body.classList.remove("sticky");
+      document.body.classList.remove('sticky');
     }
   },
   {
     // In the viewport
     root: null,
     threshold: 0,
-    rootMargin: "-80px",
+    rootMargin: '-80px',
   }
 );
-obs.observe(sectionHeroEl);
+obs?.observe(sectionHeroEl);
 
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
-  var flex = document.createElement("div");
-  flex.style.display = "flex";
-  flex.style.flexDirection = "column";
-  flex.style.rowGap = "1px";
+  var flex = document.createElement('div');
+  flex.style.display = 'flex';
+  flex.style.flexDirection = 'column';
+  flex.style.rowGap = '1px';
 
-  flex.appendChild(document.createElement("div"));
-  flex.appendChild(document.createElement("div"));
+  flex.appendChild(document.createElement('div'));
+  flex.appendChild(document.createElement('div'));
 
   document.body.appendChild(flex);
   var isSupported = flex.scrollHeight === 1;
   flex.parentNode.removeChild(flex);
   console.log(isSupported);
 
-  if (!isSupported) document.body.classList.add("no-flexbox-gap");
+  if (!isSupported) document.body.classList.add('no-flexbox-gap');
 }
 checkFlexGap();
 
