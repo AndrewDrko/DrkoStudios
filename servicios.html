@@ -15,52 +15,51 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script defer src="/js/script.js" type="module"></script>
     <script defer src="/js/script-servicios.js" type="module"></script>
     <title>Servicios - Drko Studios</title>
   </head>
 
   <body>
-    <div class="main-section">
-      <header class="main-header">
-        <div class="nav-box">
-          <a href="index.html">
-            <img
-              class="logo-typo"
-              src="img/logotype.png"
-              alt="Drko Studios logo plus typography"
-            />
-          </a>
-          <nav class="nav-header">
-            <ul>
-              <li><a class="nav-link" href="index.html">Inicio</a></li>
-              <li><a class="nav-link" href="servicios.html">Servicios</a></li>
-              <li>
-                <a class="nav-link" href="index.html#contact-section"
-                  >Contacto</a
-                >
-              </li>
-              <li>
-                <a class="car-link nav-link" href="checking.html">
-                  <div class="center">
-                    <ion-icon class="ico ico-car" name="cart"></ion-icon>
-                    <span class="car-num">0</span>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </nav>
+    <header class="main-header">
+      <div class="nav-box">
+        <a href="index.html">
+          <img
+            class="logo-typo"
+            src="img/logotype.png"
+            alt="Drko Studios logo plus typography"
+          />
+        </a>
+        <nav class="nav-header">
+          <ul>
+            <li><a class="nav-link" href="index.html">Inicio</a></li>
+            <li><a class="nav-link" href="servicios.html">Servicios</a></li>
+            <li>
+              <a class="nav-link" href="index.html#contact-section">Contacto</a>
+            </li>
+            <li>
+              <a class="car-link nav-link" href="checking.html">
+                <div class="center">
+                  <ion-icon class="ico ico-car" name="cart"></ion-icon>
+                  <span class="car-num">0</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </nav>
 
-          <button class="btn-mobile-nav">
-            <ion-icon class="icon-mobile-nav" name="menu"></ion-icon>
-            <ion-icon
-              class="icon-mobile-nav"
-              name="close-circle-outline"
-            ></ion-icon>
-          </button>
-        </div>
-      </header>
+        <button class="btn-mobile-nav">
+          <ion-icon class="icon-mobile-nav" name="menu"></ion-icon>
+          <ion-icon
+            class="icon-mobile-nav"
+            name="close-circle-outline"
+          ></ion-icon>
+        </button>
+      </div>
+    </header>
 
-      <section class="banner-section">
+    <main>
+      <section class="banner-section sticky-section">
         <div class="banner container">
           <img
             class="logo-typo"
@@ -81,36 +80,36 @@
       <section class="products-section">
         <div class="products container grid grid--2-cols"></div>
       </section>
+    </main>
 
-      <footer>
-        <div class="footer-section">
-          <div class="footer-head">
-            <div class="line"></div>
-            <div class="line-social">
-              <ion-icon class="ico social-ico" name="logo-facebook"></ion-icon>
-              <ion-icon class="ico social-ico" name="logo-instagram"></ion-icon>
-              <ion-icon class="ico social-ico" name="logo-twitter"></ion-icon>
-              <ion-icon class="ico social-ico" name="logo-youtube"></ion-icon>
-            </div>
-            <div class="line"></div>
+    <footer>
+      <div class="footer-section">
+        <div class="footer-head">
+          <div class="line"></div>
+          <div class="line-social">
+            <ion-icon class="ico social-ico" name="logo-facebook"></ion-icon>
+            <ion-icon class="ico social-ico" name="logo-instagram"></ion-icon>
+            <ion-icon class="ico social-ico" name="logo-twitter"></ion-icon>
+            <ion-icon class="ico social-ico" name="logo-youtube"></ion-icon>
           </div>
-          <div class="content-footer">
-            <figure class="footer-logo">
-              <img
-                class="logo-typo"
-                src="img/logotype.png"
-                alt="Drko Studios Logo"
-              />
-            </figure>
-            <p class="c-message">
-              Copyright &copy; <span class="year"></span
-              ><span> Drko Studios.</span>
-            </p>
-          </div>
-          <div class="footer-contact"></div>
+          <div class="line"></div>
         </div>
-      </footer>
-    </div>
+        <div class="content-footer">
+          <figure class="footer-logo">
+            <img
+              class="logo-typo"
+              src="img/logotype.png"
+              alt="Drko Studios Logo"
+            />
+          </figure>
+          <p class="c-message">
+            Copyright &copy; <span class="year"></span
+            ><span> Drko Studios.</span>
+          </p>
+        </div>
+        <div class="footer-contact"></div>
+      </div>
+    </footer>
   </body>
 </html>
 

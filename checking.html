@@ -17,6 +17,7 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
     <script defer src="/js/script-servicios.js" type="module"></script>
+    <script defer src="/js/script-checking.js" type="module"></script>
     <title>Servicios - Drko Studios</title>
   </head>
 
@@ -63,69 +64,153 @@
 
       <section class="car-section">
         <div class="car car-cont">
-          <h2 class="secondary-heading subtitle">Carrito de Compras</h2>
+          <h2 class="secondary-heading subtitle car-sub">Carrito de Compras</h2>
 
-          <div class="tables">
-            <div class="checking-table grid grid--4-cols">
-              <h3 class="tertiary-heading serv">Servicio</h3>
-              <h3 class="tertiary-heading cnt">Cantidad</h3>
-              <h3 class="tertiary-heading pr">Precio</h3>
-
-              <img
-                class="check-img"
-                src="img/Cartoon_music.jpg"
-                alt="Drko Studios logo plus typography"
-              />
-              <div class="text-area">
-                <h2 class="secondary-heading subtitle">Producción Musical</h2>
-                <p class="available">Disponible</p>
-                <p class="message">
-                  ¡Nos pondremos en contacto contigo para comenzar!
-                </p>
+          <div class="tables grid grid--4-cols">
+            <div class="table-products">
+              <div class="checking-table grid grid--4-cols">
+                <h3 class="tertiary-heading serv">Servicio</h3>
+                <h3 class="tertiary-heading cnt">Cantidad</h3>
+                <h3 class="tertiary-heading pr">Precio</h3>
               </div>
-              <div class="quantity-product">
-                <span class="order-number">0</span>
-                <div class="btn-cont">
-                  <button class="btn-arrow arrow-up">
-                    <ion-icon class="chev" name="chevron-up-outline"></ion-icon>
-                  </button>
-                  <button class="btn-arrow arrow-down">
-                    <ion-icon
-                      class="chev"
-                      name="chevron-down-outline"
-                    ></ion-icon>
-                  </button>
+
+              <div id="production-product" class="product grid grid--4-cols">
+                <img
+                  class="check-img"
+                  src="img/Cartoon_music.jpg"
+                  alt="Drko Studios logo plus typography"
+                />
+                <div class="text-area">
+                  <h2 class="secondary-heading subtitle">Producción Musical</h2>
+                  <p class="available">Disponible</p>
+                  <p class="message">
+                    ¡Nos pondremos en contacto contigo para comenzar!
+                  </p>
+                  <button class="btns-check btn-remove">Remover</button>
                 </div>
-              </div>
-              <p class="pricing"><span>$</span>399 MXN.</p>
-
-              <img
-                class="check-img"
-                src="img/Cartoon_music.jpg"
-                alt="Drko Studios logo plus typography"
-              />
-              <div class="text-area">
-                <h2 class="secondary-heading subtitle">Producción Musical</h2>
-                <p class="available">Disponible</p>
-                <p class="message">
-                  ¡Nos pondremos en contacto contigo para comenzar!
-                </p>
-              </div>
-              <div class="quantity-product">
-                <span class="order-number">0</span>
-                <div class="btn-cont">
-                  <button class="btn-arrow arrow-up">
-                    <ion-icon class="chev" name="chevron-up-outline"></ion-icon>
-                  </button>
-                  <button class="btn-arrow arrow-down">
-                    <ion-icon
-                      class="chev"
-                      name="chevron-down-outline"
-                    ></ion-icon>
-                  </button>
+                <div class="quantity-product">
+                  <span class="order-number">0</span>
+                  <div class="btn-cont">
+                    <button class="btn-arrow arrow-up">
+                      <ion-icon
+                        class="chev"
+                        name="chevron-up-outline"
+                      ></ion-icon>
+                    </button>
+                    <button class="btn-arrow arrow-down">
+                      <ion-icon
+                        class="chev"
+                        name="chevron-down-outline"
+                      ></ion-icon>
+                    </button>
+                  </div>
                 </div>
+                <p class="pricing"><span>$</span>399 MXN.</p>
               </div>
-              <p class="pricing"><span>$</span>399 MXN.</p>
+
+              <div id="mix-product" class="product grid grid--4-cols">
+                <img
+                  class="check-img"
+                  src="img/Cartoon_music_production.jpg"
+                  alt="Drko Studios logo plus typography"
+                />
+                <div class="text-area">
+                  <h2 class="secondary-heading subtitle">Mezcla</h2>
+                  <p class="available">Disponible</p>
+                  <p class="message">
+                    ¡Nos pondremos en contacto contigo para comenzar!
+                  </p>
+                  <button class="btns-check btn-remove">Remover</button>
+                </div>
+                <div class="quantity-product">
+                  <span class="order-number">0</span>
+                  <div class="btn-cont">
+                    <button class="btn-arrow arrow-up">
+                      <ion-icon
+                        class="chev"
+                        name="chevron-up-outline"
+                      ></ion-icon>
+                    </button>
+                    <button class="btn-arrow arrow-down">
+                      <ion-icon
+                        class="chev"
+                        name="chevron-down-outline"
+                      ></ion-icon>
+                    </button>
+                  </div>
+                </div>
+                <p class="pricing"><span>$</span>499 MXN.</p>
+              </div>
+
+              <div id="mastering-product" class="product grid grid--4-cols">
+                <img
+                  class="check-img"
+                  src="img/Cartoon_masterin.jpg"
+                  alt="Drko Studios logo plus typography"
+                />
+                <div class="text-area">
+                  <h2 class="secondary-heading subtitle">Mastering</h2>
+                  <p class="available">Disponible</p>
+                  <p class="message">
+                    ¡Nos pondremos en contacto contigo para comenzar!
+                  </p>
+                  <button class="btns-check btn-remove">Remover</button>
+                </div>
+                <div class="quantity-product">
+                  <span class="order-number">0</span>
+                  <div class="btn-cont">
+                    <button class="btn-arrow arrow-up">
+                      <ion-icon
+                        class="chev"
+                        name="chevron-up-outline"
+                      ></ion-icon>
+                    </button>
+                    <button class="btn-arrow arrow-down">
+                      <ion-icon
+                        class="chev"
+                        name="chevron-down-outline"
+                      ></ion-icon>
+                    </button>
+                  </div>
+                </div>
+                <p class="pricing"><span>$</span>199 MXN.</p>
+              </div>
+
+              <div id="dist-product" class="product grid grid--4-cols">
+                <img
+                  class="check-img"
+                  src="img/Cartoon_music_streaming.jpg"
+                  alt="Drko Studios logo plus typography"
+                />
+                <div class="text-area">
+                  <h2 class="secondary-heading subtitle">
+                    Distribución a Plataformas de Streaming
+                  </h2>
+                  <p class="available">Disponible</p>
+                  <p class="message">
+                    ¡Nos pondremos en contacto contigo para comenzar!
+                  </p>
+                  <button class="btns-check btn-remove">Remover</button>
+                </div>
+                <div class="quantity-product">
+                  <span class="order-number">0</span>
+                  <div class="btn-cont">
+                    <button class="btn-arrow arrow-up">
+                      <ion-icon
+                        class="chev"
+                        name="chevron-up-outline"
+                      ></ion-icon>
+                    </button>
+                    <button class="btn-arrow arrow-down">
+                      <ion-icon
+                        class="chev"
+                        name="chevron-down-outline"
+                      ></ion-icon>
+                    </button>
+                  </div>
+                </div>
+                <p class="pricing"><span>$</span>99 MXN.</p>
+              </div>
             </div>
 
             <aside>
@@ -148,6 +233,7 @@
                   <button class="btn-submit">Proceder con la Compra</button>
                 </form>
               </div>
+              <button class="btns-check btn-empty-car">Vaciar Carrito</button>
             </aside>
           </div>
         </div>

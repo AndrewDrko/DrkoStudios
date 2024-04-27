@@ -85,17 +85,18 @@ allLinks.forEach(function (link) {
 ///////////////////////////////////////////////////////////
 // Sticky Navigation
 
-const sectionHeroEl = document.querySelector(".section-hero");
+const sectionHeroEl = document.querySelector(".sticky-section");
+const header = document.querySelector(".main-header");
 
 const obs = new IntersectionObserver(
   function (entries) {
     const ent = entries[0];
     console.log(ent);
     if (ent.isIntersecting === false) {
-      document.body.classList.add("sticky");
+      header.classList.add("sticky");
     }
     if (ent.isIntersecting === true) {
-      document.body.classList.remove("sticky");
+      header.classList.remove("sticky");
     }
   },
   {
