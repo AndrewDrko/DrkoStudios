@@ -104,6 +104,7 @@ Default:
 }
 
 .service-img {
+  mask-image: linear-gradient(black 80%, transparent);
   border-top-right-radius: 9px;
   height: 100%;
   width: 100%;
@@ -130,6 +131,7 @@ Default:
 
 .pricing {
   font-size: 2.4rem;
+  letter-spacing: 1.2px;
 }
 
 .pricing span {
@@ -152,7 +154,7 @@ Default:
   color: #e4e4e4;
   background-color: #990505;
   transition: all 0.3s;
-  width: 50%;
+  width: 70%;
   height: 5rem;
   align-self: center;
   justify-self: center;
