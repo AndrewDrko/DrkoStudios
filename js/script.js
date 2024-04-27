@@ -1,4 +1,4 @@
-import { getNumProducts } from "./script-servicios.js";
+import { getNumProducts } from "./../utils/cartAPI.js";
 
 const numProductsElement = document.querySelector(".car-num");
 numProductsElement.innerHTML = getNumProducts();
@@ -122,7 +122,6 @@ function checkFlexGap() {
   document.body.appendChild(flex);
   var isSupported = flex.scrollHeight === 1;
   flex.parentNode.removeChild(flex);
-  console.log(isSupported);
 
   if (!isSupported) document.body.classList.add("no-flexbox-gap");
 }
