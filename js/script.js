@@ -10,18 +10,6 @@ yearEl.textContent = currentYear;
 
 /* MAKE MOBILE NAVIGATION WORK */
 
-const btnNavEl = document.querySelector(".btn-mobile-nav");
-const headerEl = document.querySelector(".main-header");
-
-btnNavEl.addEventListener("click", function () {
-  headerEl.classList.toggle("nav-open");
-
-  const headerEl = document.querySelector("header");
-  if (link.classList.contains("main-nav-link")) {
-    headerEl.classList.toggle("nav-open");
-  }
-});
-
 ///////////////////////////////////////////////////////////
 // Smooth Scrolling animation
 

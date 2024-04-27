@@ -1,42 +1,42 @@
-const yearEl = document.querySelector('.year');
+const yearEl = document.querySelector(".year");
 const currentYear = new Date().getFullYear();
 yearEl.textContent = currentYear;
 
-const btnNavEl = document.querySelector('.btn-mobile-nav');
-const headerEl = document.querySelector('.main-header');
+const btnNavEl = document.querySelector(".btn-mobile-nav");
+const headerEl = document.querySelector(".main-header");
 
-btnNavEl.addEventListener('click', function () {
-  headerEl.classList.toggle('nav-open');
+btnNavEl.addEventListener("click", function () {
+  headerEl.classList.toggle("nav-open");
 });
 
-const allLinks = document.querySelectorAll('a');
+const allLinks = document.querySelectorAll("a");
 
 allLinks.forEach(function (link) {
-  link.addEventListener('click', function (e) {
-    const href = link.getAttribute('href');
+  link.addEventListener("click", function (e) {
+    const href = link.getAttribute("href");
 
     // Check if the link is an internal anchor link
-    if (href && (href.startsWith('#') || href === '#')) {
+    if (href && (href.startsWith("#") || href === "#")) {
       e.preventDefault();
 
       // Scroll back to top
-      if (href === '#') {
+      if (href === "#") {
         window.scrollTo({
           top: 0,
-          behavior: 'smooth',
+          behavior: "smooth",
         });
       } else {
         // Scroll to other anchor links
         const sectionEl = document.querySelector(href);
         if (sectionEl) {
-          sectionEl.scrollIntoView({ behavior: 'smooth' });
+          sectionEl.scrollIntoView({ behavior: "smooth" });
         }
       }
 
       // Close mobile navigation
-      const headerEl = document.querySelector('header');
-      if (link.classList.contains('main-nav-link')) {
-        headerEl.classList.toggle('nav-open');
+      const headerEl = document.querySelector("header");
+      if (link.classList.contains("main-nav-link")) {
+        headerEl.classList.toggle("nav-open");
       }
     }
   });
@@ -45,16 +45,16 @@ allLinks.forEach(function (link) {
 /******************************************************************** */
 // Functionality cart
 /******************************************************************** */
-import { products } from './../dev-data/products.js';
-import { addItemCart, getNumProducts } from '../utils/cartAPI.js';
+import { products } from "./../dev-data/products.js";
+import { addItemCart, getNumProducts } from "../utils/cartAPI.js";
 
 function cartMain() {
-  const productsContainer = document.querySelector('.products');
-  const numProductsElement = document.querySelector('.car-num');
+  const productsContainer = document.querySelector(".products");
+  const numProductsElement = document.querySelector(".car-num");
 
   if (!productsContainer && !numProductsElement) return;
 
-  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
   // Render products
   const rederProducts = () => {
@@ -74,7 +74,7 @@ function cartMain() {
                 .map((item) => {
                   return `<li>${item}</li>`;
                 })
-                .join(' ')}
+                .join(" ")}
             </ul>
           </div>
           <img
@@ -92,7 +92,7 @@ function cartMain() {
         </div>
       `;
 
-      productsContainer?.insertAdjacentHTML('beforeend', markupProduct);
+      productsContainer?.insertAdjacentHTML("beforeend", markupProduct);
     });
   };
 
@@ -113,7 +113,7 @@ function cartMain() {
                 .map((item) => {
                   return `<li>${item}</li>`;
                 })
-                .join(' ')}
+                .join(" ")}
             </ul>
           </div>
           <img
@@ -131,7 +131,7 @@ function cartMain() {
         </div>
       `;
 
-      productsContainer?.insertAdjacentHTML('beforeend', markupProduct);
+      productsContainer?.insertAdjacentHTML("beforeend", markupProduct);
     });
   };
 
@@ -139,9 +139,9 @@ function cartMain() {
   function handleAddProduct(e) {
     const btnProduct = e.target;
 
-    if (!btnProduct.classList.contains('button-car')) return;
+    if (!btnProduct.classList.contains("button-car")) return;
 
-    const productElement = e.target.closest('.square-production');
+    const productElement = e.target.closest(".square-production");
     const productId = +productElement.dataset.productId;
 
     addItemCart(productId);
@@ -149,7 +149,7 @@ function cartMain() {
   }
 
   // LISTEN EVENTS
-  productsContainer?.addEventListener('click', handleAddProduct);
+  productsContainer?.addEventListener("click", handleAddProduct);
 
   // INIT
   rederProducts();
