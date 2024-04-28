@@ -71,32 +71,6 @@ allLinks.forEach(function (link) {
 });
 
 ///////////////////////////////////////////////////////////
-// Sticky Navigation
-
-const sectionHeroEl = document.querySelector(".sticky-section");
-const header = document.querySelector(".main-header");
-
-const obs = new IntersectionObserver(
-  function (entries) {
-    const ent = entries[0];
-    console.log(ent);
-    if (ent.isIntersecting === false) {
-      header.classList.add("sticky");
-    }
-    if (ent.isIntersecting === true) {
-      header.classList.remove("sticky");
-    }
-  },
-  {
-    // In the viewport
-    root: null,
-    threshold: 0,
-    rootMargin: "-80px",
-  }
-);
-obs?.observe(sectionHeroEl);
-
-///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
   var flex = document.createElement("div");
@@ -167,3 +141,11 @@ checkFlexGap();
   }
 }
 */
+
+///////////////////////////////////////////////////////////
+// Sticky Navigation
+
+window.addEventListener("scroll", function () {
+  var header = document.querySelector("header");
+  header.classList.toggle("sticky", window.scrollY > 0);
+});
