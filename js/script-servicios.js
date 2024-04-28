@@ -53,6 +53,7 @@ import {
   clearCart,
   updateLocalStorage,
   incrementQuantity,
+  deleteItemCart,
   decreseQuantity,
 } from '../utils/cartAPI.js';
 
@@ -161,10 +162,16 @@ function cartMain() {
     containerProductCart.addEventListener('click', (e) => {
       const arrowUp = e.target.closest('.arrow-up');
       const arrowDown = e.target.closest('.arrow-down');
+      const btnRemove = e.target.closest('.btn-remove');
 
       // if (arrowDown || arrowDown) return;
       const productElement = e.target.closest('.product');
       const productId = +productElement.dataset.productId;
+
+      if (btnRemove) {
+        console.log(btnRemove);
+        deleteItemCart(productId);
+      }
 
       if (arrowUp) {
         incrementQuantity(productId);
