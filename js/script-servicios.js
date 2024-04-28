@@ -35,7 +35,7 @@ allLinks.forEach(function (link) {
 
       // Close mobile navigation
       const headerEl = document.querySelector("header");
-      if (link.classList.contains("main-nav-link")) {
+      if (link.classList.contains("nav-link")) {
         headerEl.classList.toggle("nav-open");
       }
     }

@@ -64,8 +64,6 @@ allLinks.forEach(function (link) {
           sectionEl.scrollIntoView({ behavior: "smooth" });
         }
       }
-
-      // Close mobile navigation
     }
   });
 });
