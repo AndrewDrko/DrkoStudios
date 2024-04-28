@@ -1,5 +1,18 @@
 import { products } from './../dev-data/products.js';
 
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+// LOCAL STORAGE
+export const updateLocalStorage = (item, data) => {
+  console.log(data);
+  localStorage.clear();
+  localStorage.setItem(item, JSON.stringify(data));
+};
+
+export const clearCart = () => {
+  localStorage.clear();
+};
+
 // CART FUNCIONALITY
 export const addItemCart = (id) => {
   // Verify if exist item in the cart
@@ -28,9 +41,49 @@ export const getNumProducts = () => {
   );
 };
 
-// LOCAL STORAGE
-export const updateLocalStorage = (item, data) => {
-  console.log(data);
-  localStorage.clear();
-  localStorage.setItem(item, JSON.stringify(data));
+export const getTotalPrice = () => {
+  const totalPrice = cart.reduce(
+    (acc, cur) => acc + cur.price * cur.quantity,
+    0
+  );
+  return totalPrice;
+};
+
+export const getProducts = () => {
+  const products = localStorage.getItem('cart');
+
+  if (!products) return [];
+
+  return JSON.parse(products);
+};
+
+export const deleteItemCart = (id) => {
+  const productsCart = getProducts();
+  const indexProduct = productsCart.findIndex((product) => product.id === id);
+
+  productsCart.splice(indexProduct, 1);
+
+  updateLocalStorage('cart', productsCart);
+};
+
+export const incrementQuantity = (id) => {
+  const products = getProducts();
+  const product = products.find((product) => product.id === id);
+
+  product.quantity++;
+  updateLocalStorage('cart', products);
+};
+
+export const decreseQuantity = (id) => {
+  const products = getProducts();
+  const product = products.find((product) => product.id === id);
+  console.log(product.quantity);
+
+  if (product.quantity - 1 === 0) {
+    deleteItemCart(product.id);
+    return;
+  }
+
+  product.quantity--;
+  updateLocalStorage('cart', products);
 };
