@@ -1,42 +1,42 @@
-const yearEl = document.querySelector('.year');
+const yearEl = document.querySelector(".year");
 const currentYear = new Date().getFullYear();
 yearEl.textContent = currentYear;
 
-const btnNavEl = document.querySelector('.btn-mobile-nav');
-const headerEl = document.querySelector('.main-header');
+const btnNavEl = document.querySelector(".btn-mobile-nav");
+const headerEl = document.querySelector(".main-header");
 
-btnNavEl.addEventListener('click', function () {
-  headerEl.classList.toggle('nav-open');
+btnNavEl.addEventListener("click", function () {
+  headerEl.classList.toggle("nav-open");
 });
 
-const allLinks = document.querySelectorAll('a');
+const allLinks = document.querySelectorAll("a");
 
 allLinks.forEach(function (link) {
-  link.addEventListener('click', function (e) {
-    const href = link.getAttribute('href');
+  link.addEventListener("click", function (e) {
+    const href = link.getAttribute("href");
 
     // Check if the link is an internal anchor link
-    if (href && (href.startsWith('#') || href === '#')) {
+    if (href && (href.startsWith("#") || href === "#")) {
       e.preventDefault();
 
       // Scroll back to top
-      if (href === '#') {
+      if (href === "#") {
         window.scrollTo({
           top: 0,
-          behavior: 'smooth',
+          behavior: "smooth",
         });
       } else {
         // Scroll to other anchor links
         const sectionEl = document.querySelector(href);
         if (sectionEl) {
-          sectionEl.scrollIntoView({ behavior: 'smooth' });
+          sectionEl.scrollIntoView({ behavior: "smooth" });
         }
       }
 
       // Close mobile navigation
-      const headerEl = document.querySelector('header');
-      if (link.classList.contains('main-nav-link')) {
-        headerEl.classList.toggle('nav-open');
+      const headerEl = document.querySelector("header");
+      if (link.classList.contains("main-nav-link")) {
+        headerEl.classList.toggle("nav-open");
       }
     }
   });
@@ -45,7 +45,7 @@ allLinks.forEach(function (link) {
 /******************************************************************** */
 // Functionality cart
 /******************************************************************** */
-import { products } from './../dev-data/products.js';
+import { products } from "./../dev-data/products.js";
 import {
   addItemCart,
   getNumProducts,
@@ -55,16 +55,16 @@ import {
   incrementQuantity,
   deleteItemCart,
   decreseQuantity,
-} from '../utils/cartAPI.js';
+} from "../utils/cartAPI.js";
 
 function cartMain() {
-  const productsContainer = document.querySelector('.products');
-  const numProductsElement = document.querySelector('.car-num');
-  const totalPriceEl = document.querySelector('.total-pricing');
+  const productsContainer = document.querySelector(".products");
+  const numProductsElement = document.querySelector(".car-num");
+  const totalPriceEl = document.querySelector(".total-pricing");
 
   if (!productsContainer && !numProductsElement && !totalPriceEl) return;
 
-  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
   // Render products
   const rederProducts = () => {
@@ -84,7 +84,7 @@ function cartMain() {
                 .map((item) => {
                   return `<li>${item}</li>`;
                 })
-                .join(' ')}
+                .join(" ")}
             </ul>
           </div>
           <img
@@ -102,16 +102,16 @@ function cartMain() {
         </div>
       `;
 
-      productsContainer?.insertAdjacentHTML('beforeend', markupProduct);
+      productsContainer?.insertAdjacentHTML("beforeend", markupProduct);
     });
   };
 
   //
   const rederProductsCart = () => {
-    const containerProductCart = document.querySelector('.table-products');
-    const btnEmptyCart = document.querySelector('.btn-empty-car');
-    const btnArrowUp = document.querySelector('.arrow-up');
-    const btnArrowDown = document.querySelector('.arrow-down');
+    const containerProductCart = document.querySelector(".table-products");
+    const btnEmptyCart = document.querySelector(".btn-empty-car");
+    const btnArrowUp = document.querySelector(".arrow-up");
+    const btnArrowDown = document.querySelector(".arrow-down");
 
     if (!containerProductCart) return;
 
@@ -156,16 +156,16 @@ function cartMain() {
         </div>
       `;
 
-      containerProductCart?.insertAdjacentHTML('beforeend', markupProduct);
+      containerProductCart?.insertAdjacentHTML("beforeend", markupProduct);
     });
 
-    containerProductCart.addEventListener('click', (e) => {
-      const arrowUp = e.target.closest('.arrow-up');
-      const arrowDown = e.target.closest('.arrow-down');
-      const btnRemove = e.target.closest('.btn-remove');
+    containerProductCart.addEventListener("click", (e) => {
+      const arrowUp = e.target.closest(".arrow-up");
+      const arrowDown = e.target.closest(".arrow-down");
+      const btnRemove = e.target.closest(".btn-remove");
 
       // if (arrowDown || arrowDown) return;
-      const productElement = e.target.closest('.product');
+      const productElement = e.target.closest(".product");
       const productId = +productElement.dataset.productId;
 
       if (btnRemove) {
@@ -183,7 +183,7 @@ function cartMain() {
       location.reload();
     });
 
-    btnEmptyCart.addEventListener('click', () => {
+    btnEmptyCart.addEventListener("click", () => {
       clearCart();
 
       location.reload();
@@ -194,9 +194,9 @@ function cartMain() {
   function handleAddProduct(e) {
     const btnProduct = e.target;
 
-    if (!btnProduct.classList.contains('button-car')) return;
+    if (!btnProduct.classList.contains("button-car")) return;
 
-    const productElement = e.target.closest('.square-production');
+    const productElement = e.target.closest(".square-production");
     const productId = +productElement.dataset.productId;
 
     addItemCart(productId);
@@ -204,7 +204,7 @@ function cartMain() {
   }
 
   // LISTEN EVENTS
-  productsContainer?.addEventListener('click', handleAddProduct);
+  productsContainer?.addEventListener("click", handleAddProduct);
 
   // INIT
   rederProducts();
@@ -214,3 +214,25 @@ function cartMain() {
 }
 
 cartMain();
+
+paypal
+  .Buttons({
+    createOrder: function (data, actions) {
+      return actions.order.create({
+        purchase_units: [
+          {
+            amount: {
+              value: String(getTotalPrice()),
+            },
+          },
+        ],
+      });
+    },
+    onApprove: function (data, actions) {
+      return actions.order.capture().then(function (details) {
+        alert("Pago completado por " + details.payer.name.given_name);
+        // Aquí puedes agregar código para enviar el correo según el formulario
+      });
+    },
+  })
+  .render("#paypal-button-container");

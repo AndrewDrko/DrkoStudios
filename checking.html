@@ -16,6 +16,7 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AWGfSApux02swyFOc5zG8NwMD0ypc-HV5faf6O2fccP4ulu7OqIbrvNoEzXnr_7PCJlJRw3v_jFWizHm&currency=MXN"></script>
     <script defer src="/js/script.js" type="module"></script>
     <script defer src="/js/script-servicios.js" type="module"></script>
     <script defer src="/js/script-checking.js" type="module"></script>
@@ -82,18 +83,24 @@
                   <h3 class="tertiary-heading serv">Total</h3>
                   <p class="pricing total-pricing"><span>$</span>399.00 MXN.</p>
                 </div>
-                <form class="cta-form-section total-form">
+                <form id="total-form" class="cta-form-section total-form">
                   <input
+                    id="nombre"
                     type="text"
                     placeholder="Ingrese Nombre Completo"
                     required
                   />
                   <input
+                    id="email"
                     type="email"
                     placeholder="Ingrese Correo Electrónico"
                     required
                   />
-                  <button class="btn-submit">Proceder con la Compra</button>
+                  <!--  <button id="btn-submit" class="btn-submit">
+                    Proceder con la Compra
+                  </button>
+ -->
+                  <div id="paypal-button-container"></div>
                 </form>
               </div>
               <button class="btns-check btn-empty-car">Vaciar Carrito</button>
