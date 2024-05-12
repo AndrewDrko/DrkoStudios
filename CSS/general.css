@@ -49,6 +49,12 @@ p {
   color: #e4e4e4;
 }
 
+.social-ico:hover,
+.social-ico:active {
+  fill: #990505;
+  transition: all 0.3s;
+}
+
 .link:link,
 .link:visited {
   display: inline-block;
