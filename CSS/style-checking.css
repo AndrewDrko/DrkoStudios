@@ -198,3 +198,12 @@ aside {
 .table-products {
   grid-column: 1 / 4;
 }
+
+.total-form .btn-submit {
+  background-color: #3f3f3f65;
+}
+
+.paypal-button-container {
+  visibility: hidden;
+  position: absolute;
+}

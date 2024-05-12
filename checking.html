@@ -20,6 +20,15 @@
     <script defer src="/js/script.js" type="module"></script>
     <script defer src="/js/script-servicios.js" type="module"></script>
     <script defer src="/js/script-checking.js" type="module"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      emailjs.init("mwr2G1YrUyFIFY9NB");
+    </script>
+
     <title>Servicios - Drko Studios</title>
   </head>
 
@@ -83,7 +92,7 @@
                   <h3 class="tertiary-heading serv">Total</h3>
                   <p class="pricing total-pricing"><span>$</span>399.00 MXN.</p>
                 </div>
-                <form id="total-form" class="cta-form-section total-form">
+                <!--  <form id="form" class="cta-form-section total-form">
                   <input
                     id="nombre"
                     type="text"
@@ -96,11 +105,43 @@
                     placeholder="Ingrese Correo Electrónico"
                     required
                   />
-                  <!--  <button id="btn-submit" class="btn-submit">
+                  <button id="button" class="btn-submit">
                     Proceder con la Compra
                   </button>
- -->
-                  <div id="paypal-button-container"></div>
+
+                  <div
+                    class="paypal-button-container"
+                    id="paypal-button-container"
+                  ></div>
+                </form> -->
+
+                <form id="form" class="cta-form-section total-form">
+                  <input
+                    type="text"
+                    name="nombre"
+                    id="nombre"
+                    placeholder="Ingrese Nombre Completo"
+                    required
+                  />
+
+                  <input
+                    type="text"
+                    name="email"
+                    id="email"
+                    placeholder="Ingrese Correo Electrónico"
+                    required
+                  />
+
+                  <input
+                    type="submit"
+                    id="button"
+                    class="btn-submit"
+                    value="Proceder con la Compra"
+                  />
+                  <div
+                    class="paypal-button-container"
+                    id="paypal-button-container"
+                  ></div>
                 </form>
               </div>
               <button class="btns-check btn-empty-car">Vaciar Carrito</button>

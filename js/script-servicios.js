@@ -236,3 +236,51 @@ paypal
     },
   })
   .render("#paypal-button-container");
+
+document.getElementById("form").addEventListener("submit", function (event) {
+  event.preventDefault(); // Evita que el formulario se envíe
+  // Verifica si el formulario está lleno correctamente
+  if (validarFormulario()) {
+    var paypalButton = document.querySelector(".paypal-button-container");
+    var formularioEl = document.querySelector(".form");
+    paypalButton.style.visibility = "visible";
+    paypalButton.style.position = "relative";
+    formularioEl.style.visibility = "hidden";
+    alert("Hola Mundo");
+  } else {
+    alert("Por favor, completa todos los campos del formulario.");
+  }
+});
+
+function validarFormulario() {
+  var campo1 = document.getElementById("nombre").value;
+  var campo2 = document.getElementById("email").value;
+  // Agrega más validaciones según sea necesario
+  if (campo1 !== "" && campo2 !== "") {
+    return true; // El formulario está lleno correctamente
+  } else {
+    return false; // Faltan campos por llenar
+  }
+}
+
+const btn = document.getElementById("button");
+
+document.getElementById("form").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  btn.value = "Enviando...";
+
+  const serviceID = "default_service";
+  const templateID = "template_2c15ktb";
+
+  emailjs.sendForm(serviceID, templateID, this).then(
+    () => {
+      btn.style.visibility = "hidden";
+      alert("Datos Enviados. Complete los datos de pago en PayPal");
+    },
+    (err) => {
+      btn.style.visibility = "Proceder con la Compra";
+      alert(JSON.stringify(err));
+    }
+  );
+});
