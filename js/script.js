@@ -1,7 +1,7 @@
-import { getNumProducts } from "./../utils/cartAPI.js";
+/* import { getNumProducts } from "./../utils/cartAPI.js"; */
 
-const numProductsElement = document.querySelector(".car-num");
-numProductsElement.innerHTML = getNumProducts();
+/* const numProductsElement = document.querySelector(".car-num");
+numProductsElement.innerHTML = getNumProducts(); */
 
 /* SET CURRENT YEAR */
 const yearEl = document.querySelector(".year");
@@ -144,7 +144,6 @@ checkFlexGap();
 // Sticky Navigation
 
 window.addEventListener("scroll", function () {
-  var header = document.querySelector("header");
-  header.classList.toggle("sticky", window.scrollY > 0);
+  var header = document.querySelector(".main-header");
+  header.classList.toggle("sticky", window.scrollY > 1);
 });
-

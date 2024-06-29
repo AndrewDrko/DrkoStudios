@@ -14,10 +14,10 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <script
+    <!--   <script
       src="//code.tidio.co/d4hqpul59cvwmq4uy1hwvgyq42kxkufo.js"
       async
-    ></script>
+    ></script> -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -27,7 +27,7 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
     <script defer src="/js/script.js" type="module"></script>
-    <script defer src="/js/script-servicios.js" type="module"></script>
+    <!--  <script defer src="/js/script-servicios.js" type="module"></script> -->
     <title>
       Drko Studios - Tu música, nuestro arte: mezcla y producción excepcionales.
     </title>
@@ -48,19 +48,19 @@
             <li>
               <a class="nav-link" href="#profile-section">Acerca de</a>
             </li>
-            <li><a class="nav-link" href="servicios.html">Servicios</a></li>
+            <li><a class="nav-link" href="#servicios">Servicios</a></li>
             <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
             <li>
               <a class="nav-link" href="#contact-section">Contacto</a>
             </li>
-            <li>
+            <!--   <li>
               <a class="car-link nav-link" href="checking.html">
                 <div class="center">
                   <ion-icon class="ico ico-car" name="cart"></ion-icon>
                   <span class="car-num">0</span>
                 </div>
               </a>
-            </li>
+            </li> -->
           </ul>
         </nav>
 
@@ -304,7 +304,7 @@
           <div class="cta-card grid grid--2-cols">
             <div class="cta-form-section">
               <h3 class="secondary-heading">Contacto</h3>
-              <form class="cta-form grid grid--2-cols">
+              <form class="cta-form grid grid--2-cols" netlify>
                 <input type="text" placeholder="Nombre Completo" required />
                 <input type="email" placeholder="Correo Electrónico" required />
 
@@ -329,7 +329,7 @@
                   cols="50"
                   style="resize: none"
                 ></textarea>
-                <button class="btn-submit">Enviar</button>
+                <button type="submit" class="btn-submit">Enviar</button>
               </form>
             </div>
 
@@ -390,7 +390,3 @@
     </footer>
   </body>
 </html>
-
-<script>
-  console.log("Hola Mundo");
-</script>
