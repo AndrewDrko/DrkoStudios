@@ -50,6 +50,9 @@ Default:
 /*********************************/
 
 .main-header {
+  z-index: 99;
+  position: -webkit-sticky;
+  position: sticky;
   padding: 1.6rem 0;
   border-bottom: 1px solid #3f3f3f65;
   transition: 0.3s;
