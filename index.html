@@ -305,10 +305,22 @@
             <div class="cta-form-section">
               <h3 class="secondary-heading">Contacto</h3>
               <form class="cta-form grid grid--2-cols" netlify>
-                <input type="text" placeholder="Nombre Completo" required />
-                <input type="email" placeholder="Correo Electrónico" required />
+                <input
+                  id="nombre"
+                  name="nombre"
+                  type="text"
+                  placeholder="Nombre Completo"
+                  required
+                />
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="Correo Electrónico"
+                  required
+                />
 
-                <select>
+                <select id="selecting" name="selecting">
                   <option>¿Qué servicio deseas reservar?</option>
                   <option value="produccion">Producción Musical</option>
                   <option value="mezcla">Mezcla de Audio Digital</option>
