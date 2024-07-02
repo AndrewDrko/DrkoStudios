@@ -84,12 +84,14 @@ Default:
   letter-spacing: 0.8px;
   display: inline-block;
   color: #fff;
-  transition: all 0.3s;
+  transition: all 0.2s;
 }
 
 .nav-link:hover,
 .nav-link:active {
-  background-color: #333333;
+  text-shadow: 2px 0 #990505, -2px 0 #990505, 0 2px #990505, 0 -2px #990505,
+    1px 1px #990505, -1px -1px #990505, 1px -1px #990505, -1px 1px #990505;
+  /*  background-color: #333333; */
 }
 
 .nav-header ul {
