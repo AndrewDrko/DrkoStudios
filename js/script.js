@@ -53,7 +53,7 @@ const allLinks = document.querySelectorAll("a");
 allLinks.forEach(function (link) {
   link.addEventListener("click", function (e) {
     const href = link.getAttribute("href");
-
+    headerEl.classList.toggle("nav-open");
     // Check if the link is an internal anchor link
     if (href && (href.startsWith("#") || href === "#")) {
       e.preventDefault();
