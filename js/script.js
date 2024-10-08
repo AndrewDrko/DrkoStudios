@@ -6,6 +6,7 @@ numProductsElement.innerHTML = getNumProducts(); */
 /* SET CURRENT YEAR */
 const yearEl = document.querySelector(".year");
 const currentYear = new Date().getFullYear();
+const moreLink = document.querySelector(".more-link");
 yearEl.textContent = currentYear;
 
 /* MAKE MOBILE NAVIGATION WORK */
@@ -54,8 +55,13 @@ allLinks.forEach(function (link) {
   link.addEventListener("click", function (e) {
     const href = link.getAttribute("href");
     headerEl.classList.toggle("nav-open");
-    // Check if the link is an internal anchor link
+
+    if (moreLink) {
+      headerEl.classList.remove("nav-open");
+    }
+
     if (href && (href.startsWith("#") || href === "#")) {
+      // Check if the link is an internal anchor link
       e.preventDefault();
 
       // Scroll back to top
