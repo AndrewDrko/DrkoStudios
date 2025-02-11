@@ -160,3 +160,41 @@ window.addEventListener("scroll", function () {
   var header = document.querySelector(".main-header");
   header.classList.toggle("sticky", window.scrollY > 0);
 });
+
+///////////////////////////////////////////////////////////
+// Gallery Modal
+
+const gallery = document.querySelector(".grid-galery");
+const overlay = document.querySelector(".overlay");
+const modal = document.querySelector(".modal");
+
+const closeModal = function () {
+  modal.innerHTML = "";
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
+
+overlay.addEventListener("click", function (e) {
+  e.preventDefault();
+  closeModal();
+});
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+    closeModal();
+  }
+});
+
+gallery.addEventListener("click", function (e) {
+  e.preventDefault();
+  if (e.target.tagName === "IMG") {
+    console.log(e.target.dataset.src);
+    modal.insertAdjacentHTML(
+      "afterbegin",
+      `<img src="${e.target.dataset.src}" class="img-modal" />
+      `
+    );
+    overlay.classList.remove("hidden");
+    modal.classList.remove("hidden");
+  }
+});

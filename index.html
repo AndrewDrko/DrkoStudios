@@ -22,10 +22,12 @@
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
     ></script>
+
     <script
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+
     <script defer src="/js/script.js" type="module"></script>
     <!--  <script defer src="/js/script-servicios.js" type="module"></script> -->
     <title>
@@ -133,10 +135,12 @@
               </p>
 
               <div class="profile-footer grid grid--2-cols">
-                <span class="profile-name">Andrew Zaragoza</span>
-                <span class="profile-place"
-                  >Productor e Ingeniero de Mezcla</span
-                >
+                <div class="column">
+                  <span class="profile-name">Andrew Zaragoza</span>
+                  <span class="profile-place"
+                    >Productor e Ingeniero de Mezcla</span
+                  >
+                </div>
                 <img
                   class="logo-img"
                   src="img/logo.png"
@@ -144,6 +148,72 @@
                 />
               </div>
             </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section class="galery-section">
+        <div class="section galery-header">
+          <div class="galery container">
+            <h2 class="secondary-heading">Estudio</h2>
+          </div>
+        </div>
+        <div class="grid-galery" alt="grid">
+          <div class="grid-item horizontal">
+            <img
+              src="img/galery/img3.jpg"
+              alt="item"
+              data-src="img/galery/img3.jpg"
+            />
+          </div>
+          <div class="grid-item vertical">
+            <img
+              src="img/galery/img6.jpg"
+              alt="item"
+              data-src="img/galery/img6.jpg"
+            />
+          </div>
+          <div class="grid-item horizontal">
+            <img
+              src="img/galery/img1.jpg"
+              alt="item"
+              data-src="img/galery/img1.jpg"
+            />
+          </div>
+          <div class="grid-item vertical">
+            <img
+              src="img/galery/img4.jpg"
+              alt="item"
+              data-src="img/galery/img4.jpg"
+            />
+          </div>
+          <div class="grid-item horizontal">
+            <img
+              src="img/galery/img2.jpg"
+              alt="item"
+              data-src="img/galery/img2.jpg"
+            />
+          </div>
+          <div class="grid-item horizontal">
+            <img
+              src="img/galery/img7.jpg"
+              alt="item"
+              data-src="img/galery/img7.jpg"
+            />
+          </div>
+          <div class="grid-item vertical">
+            <img
+              src="img/galery/img8.jpg"
+              alt="item"
+              data-src="img/galery/img8.jpg"
+            />
+          </div>
+          <div class="grid-item vertical">
+            <img
+              src="img/galery/img5.jpg"
+              alt="item"
+              data-src="img/galery/img5.jpg"
+            />
           </div>
         </div>
       </section>
@@ -400,5 +470,9 @@
         <div class="footer-contact"></div>
       </div>
     </footer>
+
+    <div class="modal"></div>
+
+    <div class="overlay hidden"></div>
   </body>
 </html>

@@ -50,7 +50,7 @@ Default:
 /*********************************/
 
 .main-header {
-  z-index: 99;
+  z-index: 10;
   position: -webkit-sticky;
   position: sticky;
   padding: 1.6rem 0;
@@ -112,7 +112,7 @@ Default:
   bottom: 0;
   width: 100%;
   height: 8rem;
-  z-index: 999;
+  z-index: 11;
   background-color: #361717d8;
 }
 
@@ -229,12 +229,81 @@ Default:
 .logo-img {
   grid-row: 1/3;
   grid-column: 2/3;
-  justify-self: center;
+  justify-self: end;
   width: 4.8rem;
 }
 
 .profile-img {
   height: 70rem;
+}
+
+/**********************************/
+/*GALERY SECTION*/
+/*********************************/
+.galery-section {
+  background-color: black;
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+.galery-header {
+  background-image: linear-gradient(rgba(34, 34, 34, 0.801), rgba(0, 0, 0, 0.8)),
+    url(../img/galeryback.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-top: solid 2px #151817;
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+.galery .secondary-heading {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+
+/* Grid container */
+.grid-galery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  max-width: 160rem;
+  margin: 0 auto;
+  padding: 3.2rem 2rem;
+}
+
+.grid-galery:nth-child(6) {
+  grid-column: 7 / -1;
+}
+
+/* Grid items */
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: all 0.2s;
+}
+
+.grid-item img:hover {
+  transform: scale(105%);
+}
+
+/* Specific sizes for different image types */
+.grid-item.horizontal {
+  grid-column: span 2;
+}
+
+.grid-item.vertical {
+  grid-row: span 2;
+  grid-column: span 2;
 }
 
 /**********************************/
