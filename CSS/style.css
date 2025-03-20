@@ -275,6 +275,10 @@ Default:
   grid-column: 7 / -1;
 }
 
+.img-modal {
+  height: 70rem;
+}
+
 /* Grid items */
 .grid-item {
   position: relative;
