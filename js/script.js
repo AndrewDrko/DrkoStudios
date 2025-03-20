@@ -188,13 +188,20 @@ document.addEventListener("keydown", function (e) {
 gallery.addEventListener("click", function (e) {
   e.preventDefault();
   if (e.target.tagName === "IMG") {
-    console.log(e.target.dataset.src);
     modal.insertAdjacentHTML(
       "afterbegin",
       `<img src="${e.target.dataset.src}" class="img-modal" />
+        <button class="btn-close-modal">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
       `
     );
     overlay.classList.remove("hidden");
     modal.classList.remove("hidden");
+
+    const btnCloseModal = modal.querySelector(".btn-close-modal");
+
+    // Agregar evento de cierre al botón
+    btnCloseModal.addEventListener("click", closeModal);
   }
 });
