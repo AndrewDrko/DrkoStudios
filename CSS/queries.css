@@ -143,6 +143,10 @@
   .nav-open .icon-mobile-nav[name="menu"] {
     display: none;
   }
+
+  .portfolio-cards .grid--2-cols {
+    grid-template-columns: 1fr;
+  }
 }
 
 /**********************************/
