@@ -215,6 +215,19 @@
     row-gap: 4.8rem;
   }
 
+  .grid-galery {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "item1"
+      "item2"
+      "item3"
+      "item4"
+      "item5"
+      "item6"
+      "item7";
+  }
+
   .streaming-card {
     grid-column: auto;
   }
