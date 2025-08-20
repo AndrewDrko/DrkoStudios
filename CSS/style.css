@@ -465,9 +465,9 @@ Default:
   background-attachment: fixed;
 }
 
-.grid-portfolio {
+/* .grid-portfolio {
   row-gap: 0;
-}
+} */
 
 .details-work {
   color: #fd7b7b;
