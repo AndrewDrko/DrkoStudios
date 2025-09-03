@@ -129,7 +129,6 @@ export const translations = {
 
     // FORM
     form: `
-    <div class="cta-form-section">
               <h3 class="secondary-heading">Contacto</h3>
               <form class="cta-form grid grid--2-cols" name="cta" method="POST" netlify>
                 <input
@@ -170,7 +169,7 @@ export const translations = {
                 ></textarea>
                 <button type="submit" class="btn-submit">Enviar</button>
               </form>
-            </div>`,
+           `,
 
     // CTA
     "cta-head": "¡Comienza ahora!",
@@ -300,7 +299,6 @@ export const translations = {
 
     // FORM
     form: `
-<div class="cta-form-section">
   <h3 class="secondary-heading" data-key="form-title">Contact</h3>
   <form class="cta-form grid grid--2-cols" name="cta" method="POST" netlify>
     <input
@@ -336,7 +334,6 @@ export const translations = {
     ></textarea>
     <button type="submit" class="btn-submit" data-key="form-button">Send</button>
   </form>
-</div>
 `,
 
     // CTA
