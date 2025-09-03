@@ -131,7 +131,7 @@ export const translations = {
     form: `
     <div class="cta-form-section">
               <h3 class="secondary-heading">Contacto</h3>
-              <form class="cta-form grid grid--2-cols" netlify>
+              <form class="cta-form grid grid--2-cols" name="cta" method="POST" netlify>
                 <input
                   id="nombre"
                   name="nombre"
@@ -302,7 +302,7 @@ export const translations = {
     form: `
 <div class="cta-form-section">
   <h3 class="secondary-heading" data-key="form-title">Contact</h3>
-  <form class="cta-form grid grid--2-cols" netlify>
+  <form class="cta-form grid grid--2-cols" name="cta" method="POST" netlify>
     <input
       id="nombre"
       type="text"
@@ -318,12 +318,13 @@ export const translations = {
       required
     />
     <select id="selecting" data-key="form-select">
-      <option data-key="form-option-produccion">Music Production</option>
-      <option data-key="form-option-mezcla">Digital Audio Mixing</option>
-      <option data-key="form-option-masterizacion">Mastering</option>
-      <option data-key="form-option-distribucion">Distribution to Digital Platforms</option>
-      <option data-key="form-option-todo">Production + Mixing + Mastering</option>
-      <option data-key="form-option-personalizado">Custom Service</option>
+    <option>What service do you want to book?</option>
+      <option value="produccion" data-key="form-option-produccion">Music Production</option>
+      <option value="produccion" data-key="form-option-mezcla">Digital Audio Mixing</option>
+      <option value="produccion" data-key="form-option-masterizacion">Mastering</option>
+      <option value="produccion" data-key="form-option-distribucion">Distribution to Digital Platforms</option>
+      <option value="produccion" data-key="form-option-todo">Production + Mixing + Mastering</option>
+      <option value="produccion" data-key="form-option-personalizado">Custom Service</option>
     </select>
     <textarea
       id="mensaje"
