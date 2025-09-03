@@ -1,5 +1,7 @@
 /* import { getNumProducts } from "./../utils/cartAPI.js"; */
 
+import { setLanguage } from "./setLanguage.js";
+
 /* const numProductsElement = document.querySelector(".car-num");
 numProductsElement.innerHTML = getNumProducts(); */
 
@@ -203,5 +205,43 @@ gallery.addEventListener("click", function (e) {
 
     // Agregar evento de cierre al botón
     btnCloseModal.addEventListener("click", closeModal);
+  }
+});
+
+// LANGUAGE FUNCTIONALITY
+
+const langButton = document.querySelector(".language-selector");
+const langContainer = document.querySelector(".selector-container");
+const langOptions = document.querySelectorAll(".language");
+
+langButton.addEventListener("click", function () {
+  this.classList.toggle("selected");
+  langContainer.classList.toggle("hidden");
+});
+
+langOptions.forEach((btn) => {
+  btn.addEventListener("click", function () {
+    const langSelected = this.dataset.lang;
+
+    // Cambiar el HTML principal según el idioma
+    setLanguage(langSelected);
+
+    // Cambiar el texto y la bandera del botón principal
+    const mainFlag = this.querySelector("img").src;
+    const mainText = this.querySelector("span").textContent;
+
+    langButton.querySelector("img").src = mainFlag;
+    langButton.querySelector("span").textContent = mainText;
+
+    // Ocultar el selector después de seleccionar
+    langContainer.classList.add("hidden");
+    langButton.classList.remove("selected");
+  });
+});
+
+document.addEventListener("click", (e) => {
+  if (!langButton.contains(e.target) && !langContainer.contains(e.target)) {
+    langContainer.classList.add("hidden");
+    langButton.classList.remove("selected");
   }
 });

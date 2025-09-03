@@ -29,8 +29,9 @@
     ></script>
 
     <script defer src="/js/script.js" type="module"></script>
+    
     <!--  <script defer src="/js/script-servicios.js" type="module"></script> -->
-    <title>
+    <title data-key="title">
       Drko Studios - Tu música, nuestro arte: mezcla y producción excepcionales.
     </title>
   </head>
@@ -46,14 +47,21 @@
         </a>
         <nav class="nav-header">
           <ul>
-            <li><a class="nav-link" href="index.html">Inicio</a></li>
+            <li><a class="nav-link" href="index.html" data-key="home">Inicio</a></li>
             <li>
-              <a class="nav-link" href="#profile-section">Acerca de</a>
+              <a class="nav-link" href="#profile-section" data-key="about">Acerca de</a>
             </li>
-            <li><a class="nav-link" href="#servicios">Servicios</a></li>
-            <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
+            <li><a class="nav-link" href="#servicios" data-key="services">Servicios</a></li>
+            <li><a class="nav-link" href="#portfolio" data-key="portfolio">Portfolio</a></li>
             <li>
-              <a class="nav-link" href="#contact-section">Contacto</a>
+              <a class="nav-link" href="#contact-section" data-key="contact">Contacto</a>
+            </li>
+            <li class="language-container">
+              <button class="language-selector"><ion-icon class="ico" name="chevron-forward-outline"></ion-icon><img class="flag-icon" src="https://images.icon-icons.com/1531/PNG/512/3253482-flag-spain-icon_106784.png"/><span> Español</span> </button>
+             <div class="selector-container hidden">
+                <button class="language" data-lang="es"><img class="flag-icon" src="https://images.icon-icons.com/1531/PNG/512/3253482-flag-spain-icon_106784.png"/><span> Español</span></button>
+                <button class="language" data-lang="en"><img class="flag-icon" src="https://images.icon-icons.com/3665/PNG/512/usa_flag_united_states_america_icon_228698.png"/><span> English</span></button>
+              </div>
             </li>
             <!--   <li>
               <a class="car-link nav-link" href="checking.html">
@@ -80,19 +88,19 @@
       <section class="hero-section sticky-section">
         <div class="hero grid grid--2-cols">
           <div class="hero-text-box">
-            <h1 class="primary-heading">
+            <h1 class="primary-heading" data-key="hero-title">
               Tu música, nuestro arte: mezcla y producción excepcionales.
             </h1>
-            <p class="general-description hero-description">
+            <p class="general-description hero-description" data-key="hero-desc">
               Explora nuestros servicios de producción musical en Drko Studios y
               dale a tu música el siguiente nivel de sonido.
             </p>
             <div class="btn-box">
-              <a class="btn btn-primary" href="#contact-section"
-                >¡Comienza Ahora!</a
+              <a class="btn btn-primary" href="#contact-section" data-key="btn-start"
+                >¡Comienza ahora!</a
               >
-              <a class="btn btn-secondary" href="#profile-section"
-                >Leer Más &downarrow;</a
+              <a class="btn btn-secondary" href="#profile-section" data-key="btn-watch-more"
+                >Leer más &downarrow;</a
               >
             </div>
           </div>
@@ -108,13 +116,13 @@
 
       <section class="section profile-section" id="profile-section">
         <div class="profile container grid grid--2-cols">
-          <h2 class="secondary-heading">Conoce Drko Studios</h2>
+          <h2 class="secondary-heading" data-key="profile-title">Conoce Drko Studios</h2>
           <picture class="profile-pic">
             <img class="profile-img" src="img/profile.png" />
           </picture>
 
           <div class="profile-text-box">
-            <blockquote class="profile-quote">
+            <blockquote class="profile-quote"  data-key="profile-quote">
               <p>
                 "¡Hola! soy Andrew Zaragoza, músico, productor, ingeniero de
                 mezcla y fundador de Drko Studios.
@@ -155,7 +163,7 @@
       <section class="galery-section">
         <div class="section galery-header">
           <div class="galery container">
-            <h2 class="secondary-heading">Estudio</h2>
+            <h2 class="secondary-heading" data-key="galery-title">Estudio</h2>
           </div>
         </div>
         <div class="grid-galery" alt="grid">
@@ -214,10 +222,10 @@
 
       <section class="section features-section" id="servicios">
         <div class="features container">
-          <h2 class="secondary-heading">
+          <h2 class="secondary-heading" data-key="features-title">
             Servicios Profesionales de Audio ¡ONLINE!
           </h2>
-          <p class="general-description features-description">
+          <p class="general-description features-description" data-key="features-description">
             Transforma tu música con nuestros servicios especializados en
             producción, mezcla y masterización en línea. Desde la creatividad
             hasta la calidad final, elevamos tu sonido para destacar en la
@@ -228,7 +236,7 @@
           src="img/banner1.png"
           alt="Picture of Drko Studios"
         /> -->
-          <div class="features-cards grid grid--3-cols grid-features">
+          <div class="features-cards grid grid--3-cols grid-features" data-key="features-cards">
             <div class="card production-card">
               <img class="card-img" src="img/daw-studio.jpg" />
               <div class="card-info">
@@ -305,7 +313,7 @@
             </div>
           </div>
           <div class="more">
-            <a class="link more-link" href="#contact-section"
+            <a class="link more-link" href="#contact-section" data-key="more-link"
               >Conoce Nuestros Paquetes &rarr;</a
             >
           </div>
@@ -314,10 +322,10 @@
 
       <section class="portfolio-section section" id="portfolio">
         <div class="portfolio container">
-          <h2 class="secondary-heading portfolio-heading">
+          <h2 class="secondary-heading portfolio-heading" data-key="portfolio-title">
             Portfolio: Mira Nuestros Trabajos Más Recientes
           </h2>
-          <p class="general-description portfolio-description">
+          <p class="general-description portfolio-description" data-key="portfolio-description">
             Mira varios de nuestros trabajos más recientes de producción, mezcla
             y master de distintos géneros y comprueba por ti mismo nuestro nivel
             de calidad.
@@ -407,7 +415,7 @@
       <section class="contact-section section" id="contact-section">
         <div class="cta container">
           <div class="cta-card grid grid--2-cols">
-            <div class="cta-form-section">
+            <div class="cta-form-section" data-key="form">
               <h3 class="secondary-heading">Contacto</h3>
               <form class="cta-form grid grid--2-cols" netlify>
                 <input
@@ -456,8 +464,8 @@
                 src="img/logotype.png"
                 alt="Drko Studios Logo"
               />
-              <h2 class="secondary-heading">¡Comienza ahora!</h2>
-              <p class="general-description">
+              <h2 class="secondary-heading" data-key="cta-head">¡Comienza ahora!</h2>
+              <p class="general-description" data-key="cta-description">
                 Contáctanos y solicita alguno de nuestros servicios de
                 producción musical, reserva un espacio para trabajar en tu
                 música. ¡No lo dudes y comienza a sonar espectacular!

@@ -102,6 +102,64 @@ Default:
   list-style: none;
 }
 
+.flag-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin: 0 0.7rem;
+}
+
+.language-selector,
+.language {
+  cursor: pointer;
+  width: 100%;
+  font-family: inherit;
+  color: #aaa;
+  background-color: inherit;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 1rem 1.3rem;
+  border-radius: 9px;
+  transition: all 0.3s;
+}
+
+.language:hover {
+  color: #fff;
+  background-color: #990505;
+}
+
+.selector-container {
+  border-radius: 9px;
+  position: absolute;
+  top: 37px;
+  left: 20px;
+  margin-top: 1.2rem;
+  background-color: #692d2d;
+}
+
+.language-container {
+  position: relative;
+}
+
+.language-selector .ico {
+  transition: all 0.3s;
+}
+
+.language-selector.selected {
+  background-color: #692d2d;
+}
+
+.language-selector:hover {
+  color: #fff;
+  background-color: #692d2d;
+}
+
+.selected .ico {
+  transform: rotate(90deg);
+}
+
 /**********************************/
 /*STICKY NAV*/
 /*********************************/
