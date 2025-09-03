@@ -128,48 +128,18 @@ export const translations = {
     `,
 
     // FORM
-    form: `
-              <h3 class="secondary-heading">Contacto</h3>
-              <form class="cta-form grid grid--2-cols" name="cta" method="POST" netlify>
-                <input
-                  id="nombre"
-                  name="nombre"
-                  type="text"
-                  placeholder="Nombre (Banda o Artista)"
-                  required
-                />
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="Correo Electrónico"
-                  required
-                />
-
-                <select id="selecting" name="selecting">
-                  <option>¿Qué servicio deseas reservar?</option>
-                  <option value="produccion">Producción Musical</option>
-                  <option value="mezcla">Mezcla de Audio Digital</option>
-                  <option value="masterizacion">Masterización</option>
-                  <option value="distribucion">
-                    Distribución a Plataformas Digitales
-                  </option>
-                  <option value="prod-mezcla-mastering">
-                    Producción + Mezcla + Mastering
-                  </option>
-                  <option value="personalizado">Servicio Personalizado</option>
-                </select>
-                <textarea
-                  id="mensaje"
-                  name="mensaje"
-                  placeholder="Cuéntanos de tu proyecto..."
-                  rows="4"
-                  cols="50"
-                  style="resize: none"
-                ></textarea>
-                <button type="submit" class="btn-submit">Enviar</button>
-              </form>
-           `,
+    "form-title": "Contacto",
+    "form-name": "Nombre (Banda o Artista)",
+    "form-email": "Correo Electrónico",
+    "form-select": "¿Qué servicio deseas reservar?",
+    "form-option-produccion": "Producción Musical",
+    "form-option-mezcla": "Mezcla de Audio Digital",
+    "form-option-masterizacion": "Masterización",
+    "form-option-distribucion": "Distribución a Plataformas Digitales",
+    "form-option-todo": "Producción + Mezcla + Mastering",
+    "form-option-personalizado": "Servicio Personalizado",
+    "form-textarea": "Cuéntanos de tu proyecto...",
+    "form-button": "Enviar",
 
     // CTA
     "cta-head": "¡Comienza ahora!",
@@ -298,44 +268,18 @@ export const translations = {
     `,
 
     // FORM
-    form: `
-  <h3 class="secondary-heading" data-key="form-title">Contact</h3>
-  <form class="cta-form grid grid--2-cols" name="cta" method="POST" netlify>
-    <input
-      id="nombre"
-      type="text"
-      data-key="form-name"
-      placeholder="Name (Band or Artist)"
-      required
-    />
-    <input
-      id="email"
-      type="email"
-      data-key="form-email"
-      placeholder="Email"
-      required
-    />
-    <select id="selecting" data-key="form-select">
-    <option>What service do you want to book?</option>
-      <option value="produccion" data-key="form-option-produccion">Music Production</option>
-      <option value="produccion" data-key="form-option-mezcla">Digital Audio Mixing</option>
-      <option value="produccion" data-key="form-option-masterizacion">Mastering</option>
-      <option value="produccion" data-key="form-option-distribucion">Distribution to Digital Platforms</option>
-      <option value="produccion" data-key="form-option-todo">Production + Mixing + Mastering</option>
-      <option value="produccion" data-key="form-option-personalizado">Custom Service</option>
-    </select>
-    <textarea
-      id="mensaje"
-      data-key="form-textarea"
-      placeholder="Tell us about your project..."
-      rows="4"
-      cols="50"
-      style="resize: none"
-    ></textarea>
-    <button type="submit" class="btn-submit" data-key="form-button">Send</button>
-  </form>
-`,
-
+    "form-title": "Contact",
+    "form-name": "Name (Band or Artist)",
+    "form-email": "Email",
+    "form-select": "Which service would you like to book?",
+    "form-option-produccion": "Music Production",
+    "form-option-mezcla": "Digital Audio Mixing",
+    "form-option-masterizacion": "Mastering",
+    "form-option-distribucion": "Distribution to Digital Platforms",
+    "form-option-todo": "Production + Mixing + Mastering",
+    "form-option-personalizado": "Custom Service",
+    "form-textarea": "Tell us about your project...",
+    "form-button": "Send",
     // CTA
     "cta-head": "Start Now!",
     "cta-description":
