@@ -89,8 +89,15 @@ Default:
 
 .nav-link:hover,
 .nav-link:active {
-  text-shadow: 2px 0 #990505, -2px 0 #990505, 0 2px #990505, 0 -2px #990505,
-    1px 1px #990505, -1px -1px #990505, 1px -1px #990505, -1px 1px #990505;
+  text-shadow:
+    2px 0 #990505,
+    -2px 0 #990505,
+    0 2px #990505,
+    0 -2px #990505,
+    1px 1px #990505,
+    -1px -1px #990505,
+    1px -1px #990505,
+    -1px 1px #990505;
   /*  background-color: #333333; */
 }
 
@@ -238,7 +245,8 @@ Default:
 /*********************************/
 
 .profile-section {
-  background-image: linear-gradient(rgba(34, 34, 34, 0.6), rgba(0, 0, 0, 0.8)),
+  background-image:
+    linear-gradient(rgba(34, 34, 34, 0.6), rgba(0, 0, 0, 0.8)),
     url(../img/fondo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -304,7 +312,8 @@ Default:
 }
 
 .galery-header {
-  background-image: linear-gradient(rgba(34, 34, 34, 0.801), rgba(0, 0, 0, 0.8)),
+  background-image:
+    linear-gradient(rgba(34, 34, 34, 0.801), rgba(0, 0, 0, 0.8)),
     url(../img/galeryback.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -516,7 +525,8 @@ Default:
   gap: 4.8rem;
 }
 .portfolio-section {
-  background-image: linear-gradient(rgba(34, 34, 34, 0.6), rgba(0, 0, 0, 0.8)),
+  background-image:
+    linear-gradient(rgba(34, 34, 34, 0.6), rgba(0, 0, 0, 0.8)),
     url(../img/fondo5.jpg);
   background-repeat: no-repeat;
   background-size: cover;

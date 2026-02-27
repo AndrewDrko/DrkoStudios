@@ -126,6 +126,7 @@ export const translations = {
       y master de distintos géneros y comprueba por ti mismo nuestro nivel
       de calidad.
     `,
+    "more-portfolio": "Ver Todo el Portfolio &rarr;",
 
     // FORM
     "form-title": "Contacto",
@@ -266,6 +267,7 @@ export const translations = {
       Check out some of our latest production, mixing, and mastering works
       across different genres and see for yourself our quality level.
     `,
+    "more-portfolio": "Check All Portfolio &rarr;",
 
     // FORM
     "form-title": "Contact",
